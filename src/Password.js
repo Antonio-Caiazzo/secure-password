@@ -35,8 +35,9 @@ class Password extends React.Component{
         let testo = evento.target.value;
         this.setState({
             parola: testo,
-            password: this.passwordcontrollo(this.state.parola)
+            password: this.passwordcontrollo(testo)
         })
+        console.log(this.state.password)
     }
 
     render(){
@@ -49,7 +50,7 @@ class Password extends React.Component{
                 </div>
                 <div>
                     <label>La tua password</label><br/>
-                    <input type="text" readOnly value={this.state.password} />
+                    <input type="text" readOnly value={this.state.password}  />
                 </div>
             </section>
         )
